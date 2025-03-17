@@ -26,6 +26,7 @@ type WaitlistFormProps = {
 
 export function WaitlistForm({ onClose }: WaitlistFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -36,12 +37,33 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Here you would normally submit this data to your API
-    console.log(values);
-    
-    // Show success state
-    setIsSubmitted(true);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSubmitting(true);
+      
+      // Submit data to our API endpoint
+      const response = await fetch('/api/submit-waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Form submission error:', errorData);
+        throw new Error('Failed to submit form');
+      }
+      
+      // Show success state
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // You could add error handling/messaging here
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -109,8 +131,16 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
                   )}
                 />
                 
-                <Button type="submit" className="w-full mt-6">
-                  <span className="font-medium">Submit</span>
+                <Button 
+                  type="submit" 
+                  className="w-full mt-6" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <span className="font-medium">Submitting...</span>
+                  ) : (
+                    <span className="font-medium">Submit</span>
+                  )}
                 </Button>
               </form>
             </Form>

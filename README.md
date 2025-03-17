@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create a `.env.local` file in the root directory with the following variables:
+
+```
+ZAPIER_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/14035339/2lqcyfk/
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev

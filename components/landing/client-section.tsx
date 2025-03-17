@@ -6,6 +6,7 @@ export default function ClientSection() {
     >
       <div className="py-14">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+          {/* }
           <h2 className="text-center text-sm font-semibold text-gray-600">
             TRUSTED BY TEAMS FROM AROUND THE WORLD
           </h2>
@@ -44,6 +45,7 @@ export default function ClientSection() {
               </li>
             </ul>
           </div>
+          */}
         </div>
       </div>
     </section>
