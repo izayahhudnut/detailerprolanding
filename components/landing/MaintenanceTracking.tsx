@@ -7,7 +7,7 @@ const MaintenanceTracking: React.FC = () => {
       <div className="text-center mb-16">
         <p className="text-[#FFBD7A] uppercase font-medium text-sm mb-2">HOW IT WORKS</p>
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Maintenance tracking<br />you'll enjoy using
+          Maintenance tracking<br />you&apos;ll enjoy using
         </h2>
       </div>
 
@@ -51,7 +51,7 @@ const MaintenanceTracking: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">See everything that matters, nothing that doesn't</h3>
+              <h3 className="text-xl font-bold mb-2">See everything that matters, nothing that doesn&apos;t</h3>
               <p className="text-gray-600">
                 Clear, uncluttered dashboards show critical maintenance information at a glance, helping your team focus on priorities without drowning in unnecessary data and complex menus.
               </p>

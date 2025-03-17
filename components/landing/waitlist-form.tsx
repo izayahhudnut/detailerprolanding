@@ -135,11 +135,11 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
             </div>
             
             <h1 className="text-2xl text-white font-bold mb-2">
-              You're on the list!
+              You&apos;re on the list!
             </h1>
             
             <TextShimmer className="text-gray-500 mb-6">
-              Thank you for your interest in DetailerPro. We'll notify you when we launch!
+              Thank you for your interest in DetailerPro. We&apos;ll notify you when we launch!
             </TextShimmer>
             
             <Button onClick={onClose} className="w-full">
