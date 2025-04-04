@@ -3,6 +3,8 @@
 import Marquee from "@/components/magicui/marquee";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from 'next/image'
+
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
   BarChart,
@@ -174,11 +176,16 @@ export default function CallToActionSection() {
             </Marquee>
             <div className="absolute z-10">
               <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-                <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
-              </div>
+              <Image
+  src="/planeclean.svg"
+  alt="Plane Logo"
+  width={96} // Adjust size to match `size-16` (16 * 6 = 96px)
+  height={96}
+  className="mx-auto lg:w-24 lg:h-24"
+/>              </div>
               <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
                 <h1 className="text-3xl font-bold lg:text-4xl">
-                  Your entire business in one platform.
+                  Your entire business in one platform
                 </h1>
                 <p className="mt-2">
                   All your documents, workflows, and tools seamlessly integrated.

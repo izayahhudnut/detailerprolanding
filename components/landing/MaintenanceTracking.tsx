@@ -38,7 +38,7 @@ const MaintenanceTracking: React.FC = () => {
             <div>
               <h3 className="text-xl font-bold mb-2">Built for maintenance teams, not IT experts</h3>
               <p className="text-gray-600">
-                Every feature is designed with aircraft maintenance professionals in mind, eliminating the steep learning curve and technical jargon found in generic alternatives.
+                Every feature is designed with detailing professionals in mind, eliminating the steep learning curve and technical jargon found in generic alternatives.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const MaintenanceTracking: React.FC = () => {
             <div>
               <h3 className="text-xl font-bold mb-2">See everything that matters, nothing that doesn&apos;t</h3>
               <p className="text-gray-600">
-                Clear, uncluttered dashboards show critical maintenance information at a glance, helping your team focus on priorities without drowning in unnecessary data and complex menus.
+                Clear, uncluttered dashboards show critical information at a glance, helping your team focus on priorities without drowning in unnecessary data and complex menus.
               </p>
             </div>
           </div>

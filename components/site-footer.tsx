@@ -13,7 +13,7 @@ export function SiteFooter() {
               />
              
             </Link>
-            <p className="max-w-xs">Aircraft Detailing Management Solution</p>
+            <p className="max-w-xs">Detailing Management Solution</p>
           </div>
         </div>
 
