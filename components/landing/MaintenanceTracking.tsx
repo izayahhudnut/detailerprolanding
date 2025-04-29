@@ -62,10 +62,10 @@ const MaintenanceTracking: React.FC = () => {
         {/* Image section */}
         <div className="relative rounded-lg shadow-2xl overflow-hidden">
           <Image 
-            src="/light.png" 
+            src="/newcta2.png" 
             alt="Maintenance tracking software interface" 
-            width={600} 
-            height={500}
+            width={700} 
+            height={700}
             className="w-full h-auto"
           />
         </div>

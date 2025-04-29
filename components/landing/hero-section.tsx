@@ -56,7 +56,7 @@ export default function HeroSection() {
           />
 
           <img
-            src="/hero.png"
+            src="/newlogo.png"
             alt="Hero Image"
             className="hidden relative w-full h-full rounded-[inherit] border object-contain dark:block"
           />
