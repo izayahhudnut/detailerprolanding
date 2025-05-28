@@ -10,23 +10,23 @@ import { useEffect, useState } from "react";
 const menuItem = [
   {
     id: 1,
-    label: "Features",
-    href: "/features",
+    label: "Clients",
+    href: "#clients",
   },
   {
     id: 2,
-    label: "Pricing",
-    href: "#",
+    label: "How It Works",
+    href: "#how-it-works",
   },
   {
     id: 3,
-    label: "Careers",
-    href: "#",
+    label: "Pricing",
+    href: "#pricing",
   },
   {
     id: 4,
-    label: "Contact Us",
-    href: "#",
+    label: "Get Started",
+    href: "#cta",
   },
 ];
 
@@ -104,6 +104,14 @@ export function SiteHeader() {
           </Link>
 
           <div className="ml-auto flex h-full items-center">
+            <Link
+              href="https://www.detailerpro.app/dashboard"
+              className="text-sm font-medium text-gray-800 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sign In
+            </Link>
           </div>
           <button
             className="ml-6 md:hidden"

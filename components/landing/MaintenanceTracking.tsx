@@ -3,7 +3,7 @@ import { Zap, Star, ClipboardCheck, Clock } from 'lucide-react';
 
 const MaintenanceTracking: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <p className="text-[#FFBD7A] uppercase font-medium text-sm mb-2">HOW IT WORKS</p>
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -70,7 +70,7 @@ const MaintenanceTracking: React.FC = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
