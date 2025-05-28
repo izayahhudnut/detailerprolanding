@@ -106,7 +106,7 @@ export function SiteHeader() {
           <div className="ml-auto flex h-full items-center">
             <Link
               href="https://www.detailerpro.app/dashboard"
-              className="text-sm font-medium text-gray-800 hover:underline"
+              className="text-sm font-medium text-white hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
