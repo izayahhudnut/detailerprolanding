@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/dashbord/:path*", "destination": "https://detailerpro.vercel.app/:path*" }
+    ]
+  }
+  
