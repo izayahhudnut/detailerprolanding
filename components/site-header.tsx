@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SimpleModal } from "@/components/SimpleModal";
+import { SignInForm } from "@/components/SignInForm";
 
 const menuItem = [
   {
@@ -78,6 +80,7 @@ export function SiteHeader() {
   };
 
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -104,14 +107,12 @@ export function SiteHeader() {
           </Link>
 
           <div className="ml-auto flex h-full items-center">
-            <Link
-              href="https://www.detailerpro.app/dashboard"
+            <button
+              onClick={() => setIsSignInOpen(true)}
               className="text-sm font-medium text-white hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Sign In
-            </Link>
+            </button>
           </div>
           <button
             className="ml-6 md:hidden"
@@ -122,6 +123,11 @@ export function SiteHeader() {
           </button>
         </div>
       </header>
+
+      <SimpleModal isOpen={isSignInOpen} onClose={() => setIsSignInOpen(false)}>
+        <SignInForm onClose={() => setIsSignInOpen(false)} />
+      </SimpleModal>
+
       <AnimatePresence>
         <motion.nav
           initial="initial"
