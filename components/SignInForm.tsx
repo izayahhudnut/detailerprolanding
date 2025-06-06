@@ -1,9 +1,8 @@
 // components/SignInForm.tsx
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
 
 type SignInFormProps = {
   onClose: () => void;
@@ -18,8 +17,8 @@ export function SignInForm({ onClose }: SignInFormProps) {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
-      <form className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <Form>
         <FormField
           control={control}
           name="email"
@@ -49,7 +48,7 @@ export function SignInForm({ onClose }: SignInFormProps) {
         <Button type="submit" className="w-full">
           Sign In
         </Button>
-      </form>
-    </Form>
+      </Form>
+    </form>
   );
 }
