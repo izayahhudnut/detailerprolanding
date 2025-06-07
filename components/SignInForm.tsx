@@ -1,54 +1,29 @@
 // components/SignInForm.tsx
-import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 type SignInFormProps = {
   onClose: () => void;
 };
 
 export function SignInForm({ onClose }: SignInFormProps) {
-  const { handleSubmit, control } = useForm();
-
-  const onSubmit = (data: any) => {
-    console.log("Sign In Data:", data);
-    onClose();
-  };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <Form>
-        <FormField
-          control={control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="email@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input type="password" placeholder="Your password" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full">
-          Sign In
-        </Button>
-      </Form>
-    </form>
+    <div className="space-y-4">
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          Email
+        </label>
+        <Input id="email" type="email" placeholder="email@example.com" className="mt-1 block w-full" />
+      </div>
+      <div>
+        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+          Password
+        </label>
+        <Input id="password" type="password" placeholder="Your password" className="mt-1 block w-full" />
+      </div>
+      <Button type="button" className="w-full" onClick={onClose}>
+        Sign In
+      </Button>
+    </div>
   );
 }
