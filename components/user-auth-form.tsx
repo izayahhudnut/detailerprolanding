@@ -20,6 +20,7 @@ import * as z from "zod";
 
 export const userAuthSchema = z.object({
   email: z.string().email(),
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
   password: z.string().optional(),
 });
 type FormData = z.infer<typeof userAuthSchema>;
@@ -31,6 +32,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     resolver: zodResolver(userAuthSchema),
     defaultValues: {
       email: "",
+      phone: "",
     },
   });
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -87,6 +89,27 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                     />
                   </FormControl>
                   {/* <FormDescription>This is your email address.</FormDescription> */}
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      id="phone"
+                      placeholder="Phone number"
+                      type="tel"
+                      autoCapitalize="none"
+                      autoComplete="tel"
+                      autoCorrect="off"
+                      disabled={isLoading || isGitHubLoading}
+                      {...field}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
