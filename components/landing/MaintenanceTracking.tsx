@@ -5,7 +5,7 @@ const MaintenanceTracking: React.FC = () => {
   return (
     <section id="how-it-works" className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <p className="text-[#FFBD7A] uppercase font-medium text-sm mb-2">HOW IT WORKS</p>
+        <p className="text-blue-500 uppercase font-medium text-sm mb-2">HOW IT WORKS</p>
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           Maintenance tracking<br />you&apos;ll enjoy using
         </h2>
@@ -16,8 +16,8 @@ const MaintenanceTracking: React.FC = () => {
           {/* Feature 1 */}
           <div className="flex items-start space-x-5">
             <div className="flex-shrink-0">
-              <div className="bg-[#FFBD7A]/10 p-3 rounded-full">
-                <Zap className="h-6 w-6 text-[#FFBD7A]" />
+              <div className="bg-blue-500/10 p-3 rounded-full">
+                <Zap className="h-6 w-6 text-blue-500" />
               </div>
             </div>
             <div>
@@ -31,8 +31,8 @@ const MaintenanceTracking: React.FC = () => {
           {/* Feature 2 */}
           <div className="flex items-start space-x-5">
             <div className="flex-shrink-0">
-              <div className="bg-[#FFBD7A]/10 p-3 rounded-full">
-                <ClipboardCheck className="h-6 w-6 text-[#FFBD7A]" />
+              <div className="bg-blue-500/10 p-3 rounded-full">
+                <ClipboardCheck className="h-6 w-6 text-blue-500" />
               </div>
             </div>
             <div>
@@ -46,8 +46,8 @@ const MaintenanceTracking: React.FC = () => {
           {/* Feature 3 */}
           <div className="flex items-start space-x-5">
             <div className="flex-shrink-0">
-              <div className="bg-[#FFBD7A]/10 p-3 rounded-full">
-                <Star className="h-6 w-6 text-[#FFBD7A]" />
+              <div className="bg-blue-500/10 p-3 rounded-full">
+                <Star className="h-6 w-6 text-blue-500" />
               </div>
             </div>
             <div>

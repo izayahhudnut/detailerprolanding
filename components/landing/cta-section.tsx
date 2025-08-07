@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { WaitlistForm } from "./waitlist-form";
+import Particles from "@/components/magicui/particles";
 
 export default function CallToActionSection() {
   const [showWaitlistForm, setShowWaitlistForm] = useState(false);
@@ -15,16 +16,16 @@ export default function CallToActionSection() {
       <div className="py-14 mt-20">
         <div className="flex w-full flex-col items-center justify-center">
           {/* Main content container with background image */}
-          <div 
-            className="relative flex flex-col items-center justify-center overflow-hidden min-h-[500px] w-full"
-            style={{
-              backgroundImage: 'url(/ctalogo.jpg)',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'contain',
-              backgroundBlendMode: 'overlay',
-            }}
-          >
+          <div className="relative flex flex-col items-center justify-center overflow-hidden min-h-[500px] w-full">
+            {/* Magic UI Particles Background */}
+            <Particles
+              className="absolute inset-0 -z-10"
+              quantity={150}
+              ease={80}
+              color="#3b82f6"
+              size={1.8}
+            />
+            
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center">
               <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
@@ -53,7 +54,7 @@ export default function CallToActionSection() {
                     "group mt-4 rounded-[2rem] px-6"
                   )}
                 >
-                  <span className="font-medium">Join the Waitlist</span>
+                  <span className="font-medium">Get Started</span>
                   <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
                 </button>
               </div>

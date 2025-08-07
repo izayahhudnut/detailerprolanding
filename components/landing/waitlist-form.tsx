@@ -80,10 +80,10 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
           <div className="p-6">
             <div className="mb-6 text-center">
               <h1 className="text-2xl font-bold">
-                Join the Waitlist
+                Get Started with DetailerPro
               </h1>
               <TextShimmer className="text-gray-500 mt-2">
-                Be the first to know when DetailerPro launches.
+                Schedule a discovery call to get started.
               </TextShimmer>
             </div>
             
@@ -137,9 +137,9 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
-                    <span className="font-medium">Submitting...</span>
+                    <span className="font-medium">Scheduling...</span>
                   ) : (
-                    <span className="font-medium">Submit</span>
+                    <span className="font-medium">Schedule Discovery Call</span>
                   )}
                 </Button>
               </form>
@@ -165,11 +165,11 @@ export function WaitlistForm({ onClose }: WaitlistFormProps) {
             </div>
             
             <h1 className="text-2xl text-white font-bold mb-2">
-              You&apos;re on the list!
+              Request Submitted!
             </h1>
             
             <TextShimmer className="text-gray-500 mb-6">
-              Thank you for your interest in DetailerPro. We&apos;ll notify you when we launch!
+              Thank you for your interest! Our team will follow up with you shortly.
             </TextShimmer>
             
             <Button onClick={onClose} className="w-full">

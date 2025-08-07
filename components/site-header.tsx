@@ -106,14 +106,6 @@ export function SiteHeader() {
             <img src="/logo.png" alt="DetailerPro Logo" className="h-8" />
           </Link>
 
-          <div className="ml-auto flex h-full items-center">
-            <button
-              onClick={() => setIsSignInOpen(true)}
-              className="text-sm font-medium text-white hover:underline"
-            >
-              Sign In
-            </button>
-          </div>
           <button
             className="ml-6 md:hidden"
             onClick={() => setHamburgerMenuIsOpen((open) => !open)}
